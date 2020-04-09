@@ -37,13 +37,17 @@ public class FirstFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(requireActivity()).get(FirstViewModel.class);
+        binding.imageView.setRotation(mViewModel.getRotationPosition());
         final ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(binding.imageView, "rotation", 0, 0);
         objectAnimator.setDuration(500);
         binding.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                objectAnimator.setFloatValues(binding.imageView.getRotation(), binding.imageView.getRotation() + 90);
-                objectAnimator.start();
+                if (!objectAnimator.isRunning()) {
+                    objectAnimator.setFloatValues(binding.imageView.getRotation(), binding.imageView.getRotation() + 90);
+                    mViewModel.setRotationPosition(binding.imageView.getRotation() + 90);
+                    objectAnimator.start();
+                }
             }
         });
 //        mViewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
