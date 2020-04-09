@@ -1,2 +1,2 @@
-rootProject.name='BottonNavigationDemo'
+rootProject.name='BottomNavigationDemo'
 include ':app'

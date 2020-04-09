@@ -1,4 +1,4 @@
-package com.supremesir.bottonnavigationdemo;
+package com.supremesir.bottomnavigationdemo;
 
 import org.junit.Test;
 

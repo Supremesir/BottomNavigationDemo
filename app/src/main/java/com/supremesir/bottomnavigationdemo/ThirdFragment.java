@@ -1,4 +1,4 @@
-package com.supremesir.bottonnavigationdemo;
+package com.supremesir.bottomnavigationdemo;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -12,24 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FirstFragment extends Fragment {
+public class ThirdFragment extends Fragment {
 
-    private FirstViewModel mViewModel;
+    private ThirdViewModel mViewModel;
 
-    public static FirstFragment newInstance() {
-        return new FirstFragment();
+    public static ThirdFragment newInstance() {
+        return new ThirdFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.first_fragment, container, false);
+        return inflater.inflate(R.layout.third_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(ThirdViewModel.class);
         // TODO: Use the ViewModel
     }
 
