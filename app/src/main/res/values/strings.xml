@@ -3,4 +3,5 @@
     <string name="rotate_title">Rotate</string>
     <string name="zoom_title">Zoom</string>
     <string name="move_title">Move</string>
+    <string name="image_description">Image Description</string>
 </resources>
