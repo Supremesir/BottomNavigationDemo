@@ -1,5 +1,6 @@
 package com.supremesir.bottomnavigationdemo;
 
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -36,6 +37,8 @@ public class FirstFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+//        // 如果用this，切换 fragment 后 ViewModel 保存的状态会清空
+//        mViewModel = new ViewModelProvider(this).get(FirstViewModel.class);
         mViewModel = new ViewModelProvider(requireActivity()).get(FirstViewModel.class);
         binding.imageView.setRotation(mViewModel.getRotationPosition());
         final ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(binding.imageView, "rotation", 0, 0);
