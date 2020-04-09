@@ -39,7 +39,7 @@ public class FirstFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 //        // 如果用this，切换 fragment 后 ViewModel 保存的状态会清空
 //        mViewModel = new ViewModelProvider(this).get(FirstViewModel.class);
-        mViewModel = new ViewModelProvider(requireActivity()).get(FirstViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(FirstViewModel.class);
         binding.imageView.setRotation(mViewModel.getRotationPosition());
         final ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(binding.imageView, "rotation", 0, 0);
         objectAnimator.setDuration(500);

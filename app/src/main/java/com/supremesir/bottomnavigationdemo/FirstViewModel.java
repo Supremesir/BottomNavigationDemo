@@ -2,9 +2,10 @@ package com.supremesir.bottomnavigationdemo;
 
 import androidx.lifecycle.ViewModel;
 
-class FirstViewModel extends ViewModel {
+// 必须为public
+public class FirstViewModel extends ViewModel {
 
-    private float rotationPosition = 0;
+    private float rotationPosition = 1;
 
     float getRotationPosition() {
         return rotationPosition;
