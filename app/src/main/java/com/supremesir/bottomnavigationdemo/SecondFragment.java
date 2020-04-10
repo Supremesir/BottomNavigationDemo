@@ -40,6 +40,7 @@ public class SecondFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(requireActivity()).get(SecondViewModel.class);
+//        mViewModel = ViewModelProviders.of(this).get(SecondViewModel.class);
         binding.imageView.setScaleX(mViewModel.getScaleFactor());
         binding.imageView.setScaleY(mViewModel.getScaleFactor());
         final ObjectAnimator objectAnimatorX = ObjectAnimator.ofFloat(binding.imageView, "scaleX", 0, 0);
@@ -58,7 +59,6 @@ public class SecondFragment extends Fragment {
                 }
             }
         });
-//        mViewModel = ViewModelProviders.of(this).get(SecondViewModel.class);
     }
 
 }
