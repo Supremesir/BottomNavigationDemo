@@ -6,11 +6,11 @@ public class SecondViewModel extends ViewModel {
 
     private float scaleFactor = 1;
 
-    public float getScaleFactor() {
+    float getScaleFactor() {
         return scaleFactor;
     }
 
-    public void setScaleFactor(float scaleFactor) {
+    void setScaleFactor(float scaleFactor) {
         this.scaleFactor = scaleFactor;
     }
 

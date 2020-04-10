@@ -6,12 +6,12 @@ public class ThirdViewModel extends ViewModel {
 
     private float dx;
 
-    public float getDx() {
+    float getDx() {
 
         return dx;
     }
 
-    public void setDx(float dx) {
+    void setDx(float dx) {
         this.dx = dx;
     }
 }
